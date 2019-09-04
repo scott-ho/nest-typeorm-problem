@@ -1,0 +1,1 @@
+You need to create the databases and users specified in ormconfig.json
