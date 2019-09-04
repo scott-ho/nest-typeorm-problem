@@ -1,0 +1,36 @@
+[
+  {
+    "name": "development",
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "nest",
+    "password": "nest",
+    "database": "dev",
+    "entities": ["src/**/**.entity.ts"],
+    "synchronize": true,
+    "migrations": ["migrations/*.ts"],
+    "cli": {
+      "migrationsDir": "migrations"
+    }
+  },
+  {
+    "name": "test",
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "testing",
+    "password": "",
+    "database": "test",
+    "dropSchema": true,
+    "logging": false,
+    "synchronize": true,
+    "multipleStatements": true,
+    "entities": ["src/**/**.entity.ts"],
+    "migrationsRun": false,
+    "migrations": ["migrations/*.ts", "migrations/tests/*.ts"],
+    "cli": {
+      "migrationsDir": "migrations"
+    }
+  }
+]
